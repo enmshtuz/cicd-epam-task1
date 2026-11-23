@@ -12,11 +12,12 @@ permissions:
 
 jobs:
   deploy:
+    environment: aws-access-key-id
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     env:
       AWS_REGION: us-east-1
-      S3_BUCKET_NAME: ${{ vars.S3_BUCKET_NAME }}
+      S3_BUCKET_NAME: cmtr-2dfktx7p-bucket-1795424143
       AWS_ROLE_ARN: arn:aws:iam::108782090284:role/role1
 
 
