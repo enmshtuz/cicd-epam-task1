@@ -12,13 +12,13 @@ permissions:
 
 jobs:
   deploy:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     env:
       AWS_REGION: us-east-1
       S3_BUCKET_NAME: ${{ vars.S3_BUCKET_NAME }}
       AWS_ROLE_ARN: arn:aws:iam::108782090284:role/role1
-      
+
 
     steps:
       - name: Check out repository
