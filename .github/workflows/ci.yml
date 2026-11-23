@@ -36,4 +36,4 @@ jobs:
           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
 
       - name: Upload repository-root index.html to S3
-        run: aws s3 cp ../index.html "s3://${S3_BUCKET_NAME}/index.html" --region "${AWS_REGION}"
+        run: aws s3 cp ./index.html "s3://${S3_BUCKET_NAME}/index.html" --region "${AWS_REGION}"
